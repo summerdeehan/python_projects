@@ -15,7 +15,7 @@ if (SOURCE_LANGUAGE and SOURCE_LANGUAGE not in LANGUAGE_CODES) or DEST_LANGUAGE 
 src = None if not SOURCE_LANGUAGE else LANGUAGE_CODES[SOURCE_LANGUAGE]
 dest = LANGUAGE_CODES[DEST_LANGUAGE]
 
-df = pd.read_excel(FILENAME)
+df = pd.read_excel(FILENAME, engine="openpyxl")
 
 terms = df[df.columns[0]]
 translations = []
